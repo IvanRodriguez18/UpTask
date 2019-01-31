@@ -253,6 +253,7 @@ body{
 	width: 80%;
 	margin: auto;
 	padding: 20px;
+	box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, .2);
 }
 .principal .contenido .pendientes ul >li{
 	display: flex;
@@ -294,10 +295,11 @@ body{
 }
 .porcentaje{
 	width: 0%;
-	background: #456990;
+	background: #037971;
 	height: 100%;
 	text-align: center;
 	color: #FFF;
+	font-size: 18px;
 	border-radius: 10px;
 	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,
 		rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
@@ -324,6 +326,9 @@ body{
 }
 @media screen and (max-width: 768px) 
 {
+	.formulario{
+		width: 50%;
+	}
 	.barra .title-barra{
 		font-size: 21px;
 		font-weight: normal;

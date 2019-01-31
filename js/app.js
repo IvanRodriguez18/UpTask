@@ -1,8 +1,10 @@
 const btnCrear = document.querySelector('#btn-crear'),
-	  btnTarea = document.querySelector('#frm-tareas'),
-	  btnpendientes = document.querySelector('.pendientes');
-      listaProyectos = document.querySelector('.lista-proyecto #lista');
+	 btnTarea = document.querySelector('#frm-tareas'),
+	 btnpendientes = document.querySelector('.pendientes'),
+     listaProyectos = document.querySelector('.lista-proyecto #lista');
+// Llamada de la función que contiene todos los eventsListeners
 eventosAll();
+// Función que contiene y ejecuta todos los eventsListener
 function eventosAll() 
 {
 	// Document Ready para realizar la barra de progreso de las tareas realizadas
@@ -19,6 +21,7 @@ function eventosAll()
 	// Ejecutar la funcion totalTareas
 	totalTareas();
 }
+// Función que crea el elemento <li> que contiene el input donde se va a escribir el nombre de la nueva tarea
 function creaProyecto(event) 
 {
 	// Crear el input para ingresar el nombre del proyecto
@@ -43,6 +46,7 @@ function creaProyecto(event)
 		}
 	});
 }
+// Función que guarada el nombre del proyecto en la base de datos
 function guardaProyectoBD(nombreProyecto) 
 {
 	// Validando que el nombre de proyecto no este vacio
@@ -147,6 +151,8 @@ function agregaTarea(event)
 		{
 			if (xhr.readyState == 4 && xhr.status == 200) 
 			{
+				console.log(xhr.readyState);
+				console.log(xhr.status);
 				const respuesta = JSON.parse(xhr.responseText);
 				console.log(respuesta);
 				if (respuesta.success == true) 
@@ -200,7 +206,6 @@ function agregaTarea(event)
 function accionesTareas(event) 
 {
 	event.preventDefault();
-	// console.log(event.target)
 	// Detectando los iconos de las acciones utilizando Delegacion en JavaScript
 	if (event.target.classList.contains('fa-check-circle')) 
 	{
@@ -214,7 +219,8 @@ function accionesTareas(event)
 			event.target.classList.add('completo');
 			cambiaEstatusTarea(event.target, 1);
 		}
-	}else if (event.target.classList.contains('fa-times-circle')) 
+	}
+	if (event.target.classList.contains('fa-times-circle')) 
 	{
 		swal({
 			type: 'warning',
@@ -249,9 +255,7 @@ function accionesTareas(event)
 function cambiaEstatusTarea(tarea, estatus) 
 {
 	const id_tarea = tarea.parentElement.parentElement.id.split(':');
-	console.log(estatus);
 	const xhr = new XMLHttpRequest();
-
 	const datos = new FormData();
 	datos.append('id_tarea', id_tarea[1]);
 	datos.append('estatus', estatus);
@@ -309,6 +313,7 @@ function actualizarProgreso()
 	console.log('Tareas completadas: ' + tareasCompletadas.length);
 	// Determinar el avance de la lista de tareas que esten completas
 	const avance = Math.round( (tareasCompletadas.length / tareas.length) * 100);
+	console.log('El avance es: ' + avance);
 	// Asignar el avance a la barra de progreso
 	const porcentaje = document.querySelector('#porcentaje');
 	// validar que el avance sea mayor a cero para mostrar la barra y el avance en pantalla
@@ -334,7 +339,7 @@ function totalTareas()
 		  cantidadTareas = document.querySelectorAll('li.tarea');
 	let total = 0;
 	cantidadTareas.forEach((tareas)=> {
-		console.log(tareas);
+		// console.log(tareas);
 		if (tareas.classList.contains('tarea')) 
 		{
 			total ++;
