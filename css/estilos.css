@@ -1,0 +1,313 @@
+@font-face{
+	font-family: 'Pt-Sans';
+	src:url('../fonts/PT_Sans-Narrow-Web-Regular.ttf');
+}
+@font-face{
+	font-family: 'Pt-Sans-Bold';
+	src:url('../fonts/PT_Sans-Narrow-Web-Bold.ttf');
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body{
+	font-family: 'Pt-Sans', sans-serif;
+}
+.login,
+.registro{
+	background: #EDEDED;
+}
+.container{
+	width: 100%;
+}
+.formulario{
+	background: #FFF;
+	width: 30%;
+	margin-top: 6rem !important;
+	margin:auto;
+	border-radius: 30px 0px 30px 0px;
+}
+.formulario .title-formulario{
+	background: #386150;
+	border-radius: 30px 0px 0px 0px;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+	font-size: 25px;
+	text-align: center;
+	color: #FFF;
+}
+.formulario .campos{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 90%;
+	margin: auto;
+}
+.formulario form input[type="text"],
+.formulario form input[type="password"]{
+	padding: 10px 0px;
+	margin: 20px 0px;
+	border:none;
+	font-size: 17px;
+	font-family: 'Pt-Sans-Bold';
+	border-bottom: 2px solid #61988E;
+}
+.formulario form input[type="text"]:focus,
+.formulario form input[type="password"]:focus{
+	border-bottom: 3px solid #61988E;
+}
+.formulario form input[type="submit"]{
+	width: 150px;
+	margin: auto;
+	padding: 10px 10px;
+	margin-bottom: 20px;
+	border: none;
+	background: #386150;
+	color: #FFF;
+	border-radius: 50px;
+	cursor: pointer;
+	font-size: 15px;
+}
+.formulario form input[type="submit"]:hover{
+	background: #4e6e58;
+}
+.formulario .redireccion{
+	background: #386150;
+	border-radius: 0px 0px 30px 0px;
+	padding: 10px 15px;
+	font-size: 15px;
+	text-align: center;
+	color: #FFF;
+}
+.formulario .redireccion a{
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFF;
+}
+.formulario .redireccion a:hover{
+	color: #EDEDED;
+	text-decoration: underline;
+}
+/*Estilos para la barra de navegacion de administración*/
+.barra{
+	background: #386250;
+	padding: 15px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.barra .title-barra{
+	color: #FFF;
+}
+.barra .barra-usuario{
+	display: flex;
+	width: 16%;
+	justify-content: space-around;
+	align-items: center;
+}
+.barra .barra-usuario .info-usuario .icono{
+	color: #FFF;
+	font-size: 20px;
+}
+.barra .barra-usuario .info-usuario .username{
+	color: #FFF;
+	font-size: 16px;
+}
+.barra .barra-usuario a{
+	color: #FFF;
+	font-size: 16px;
+	text-decoration: none;
+}
+.barra .barra-usuario a:hover{
+	text-decoration: underline;
+	cursor:pointer;
+}
+/*Estilos para el aside y el main del administrador*/
+.principal .lateral{
+	width: 30%;
+	padding: 20px;
+	background: #EDEDED;
+	float: left;
+}
+.principal .lateral .boton-crear{
+	width: 80%;
+	padding: 20px;
+	margin:auto;
+	text-align: center;
+}
+.principal .lateral .boton-crear .btn-crear{
+	width: 160px;
+	padding: 15px 5px;
+	background: #386150;
+	color: #FFF;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: 1s ease all;
+}
+.principal .lateral .boton-crear .btn-crear:hover{
+	background: #4E6E58;
+}
+.principal .lateral .lista-proyecto{
+	width: 90%;
+	margin: auto;
+	padding: 10px 15px;
+}
+.principal .lateral .lista-proyecto>h3{
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: #4E6E58;
+}
+.principal .lateral .lista-proyecto #lista >li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.principal .lateral .lista-proyecto #lista >li>input[type="text"]{
+	width: 100%;
+	padding: 5px;
+}
+.principal .lateral .lista-proyecto #lista >li>a{
+	text-decoration: none;
+	font-size: 16px;
+	color: #386150;
+	font-weight: bold;
+}
+.principal .lateral .lista-proyecto #lista >li>a:hover{
+	text-decoration: underline;
+}
+.principal .contenido{
+	width: 70%;
+	float: right;
+}
+.principal .contenido>h1{
+	text-align: center;
+	margin:10px 0px;
+	color: #386150;
+}
+.principal .contenido>p{
+	text-align: center;
+	margin:10px 0px;
+	color: #386150;
+}
+.principal .contenido .form-tareas{
+	background: #EDEDED;
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+}
+.principal .contenido .form-tareas>form .campos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.principal .contenido .form-tareas>form input[type="text"]{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 50px;
+	border:none;
+	border:2px solid #4E6E58;
+	font-weight: bold;
+	font-size: 13px;
+}
+.principal .contenido .form-tareas>form input[type="text"]:focus{
+	border:2px solid #386150;
+}
+.principal .contenido .form-tareas>form input[type="submit"]{
+	width: 150px;
+	padding: 10px 15px;
+	background: #386150;
+	color: #FFF;
+	font-size: 16px;
+	border:none;
+	cursor: pointer;
+	transition: 1s ease all;
+}
+.principal .contenido .form-tareas>form input[type="submit"]:hover{
+	background: #4E6E58;
+}
+.principal .contenido>h3{
+	text-align: center;
+	margin:15px 0px;
+	color: #386150;
+	font-size: 25px;
+}
+.contenido .totalTareas{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.contenido .totalTareas .texto{
+	color: #4E6E58;
+	font-size: 20px;
+	font-family: 'Pt-Sans-Bold';
+}
+.principal .contenido .pendientes{
+	background: #EDEDED;
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+}
+.principal .contenido .pendientes ul >li{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #4E6E58;
+}
+.principal .contenido .pendientes ul >li>p{
+	font-size: 18px;
+	color: #444;
+	margin-bottom: 5px;
+}
+.principal .contenido .pendientes ul >li .acciones{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 10%;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.progreso{
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+}
+.progreso>h4{
+	text-align: center;
+	color: #4E6E58;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.barra-avance{
+	height: 20px;
+	border-radius: 10px;
+	background: #EDEDED;
+	width: 80%;
+	margin: auto;
+}
+.porcentaje{
+	width: 0%;
+	background: #456990;
+	height: 100%;
+	text-align: center;
+	color: #FFF;
+	border-radius: 10px;
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,
+		rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size: 1rem 1rem;
+	transition: .5s ease width;
+}
+/*Estilos para los iconos*/
+.icono-accion{
+	font-size: 20px;
+	cursor: pointer;
+}
+.completo{
+	color: #499167;
+}
