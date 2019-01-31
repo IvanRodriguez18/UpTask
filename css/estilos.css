@@ -101,10 +101,11 @@ body{
 }
 .barra .title-barra{
 	color: #FFF;
+	font-weight: normal;
 }
 .barra .barra-usuario{
 	display: flex;
-	width: 16%;
+	width: 20%;
 	justify-content: space-around;
 	align-items: center;
 }
@@ -269,7 +270,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 10%;
+	width: 12%;
 	align-items: center;
 	margin-bottom: 5px;
 }
@@ -310,4 +311,77 @@ body{
 }
 .completo{
 	color: #499167;
+}
+/*Mediaquerys para hacer Responsive el sitio*/
+@media screen and (max-width: 978px) 
+{
+	.barra .barra-usuario{
+		width: 30%;
+	}
+	.principal .lateral .boton-crear{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 768px) 
+{
+	.barra .title-barra{
+		font-size: 21px;
+		font-weight: normal;
+	}
+	.principal .lateral .boton-crear{
+		width: 100%;
+	}
+	.principal .lateral .boton-crear .btn-crear{
+		width: 130px;
+		padding: 14px 5px;
+		font-size: 13px;
+	}
+	.principal .lateral .lista-proyecto{
+		width: 100%;
+		padding: 10px 15px;
+	}
+	.principal .lateral .lista-proyecto>h3{
+		font-size: 25px;
+	}
+	.principal .lateral .lista-proyecto #lista >li>a{
+		font-size: 15px;
+	}
+	.principal .contenido>h1{
+		font-size: 23px;
+	}
+	.principal .contenido .form-tareas>form input[type="text"]{
+		width: 100%;
+		padding: 7px 15px;
+		font-size: 12px;
+	}
+	.principal .contenido .form-tareas>form input[type="submit"]{
+		width: 100px;
+		padding: 10px 15px;
+		font-size: 13px;
+	}
+	.principal .contenido>h3{
+		display: none;
+		/*font-size: 20px;*/
+		/*margin: 5px 0px;*/
+	}
+	.contenido .totalTareas .texto{
+		font-size: 15px;
+		margin-top: 5px;
+	}
+	.progreso{
+		margin-top: 10px;
+	}
+	.progreso>h4{
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+	.principal .contenido .pendientes ul >li>p{
+		font-size: 16px;
+	}
+	.principal .contenido .pendientes ul >li .acciones{
+		width: 13%;
+	}
+	.icono-accion{
+		font-size: 16px;
+	}
 }

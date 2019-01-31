@@ -44,13 +44,10 @@ if (!empty($id_proyecto)) {
 						<input type="submit" value="Agregar">
 					</form>
 				</div>
-			<?php else: ?>
-				<p>Selecciona un proyecto de tu menú</p>
-			<?php endif;?>
-			<h3>Listado de Tareas</h3>
-			<div class="totalTareas">
-				<p class="texto">Total de tareas: <span id="numero"></span></p>
-			</div>
+				<h3>Listado de Tareas</h3>
+				<div class="totalTareas">
+					<p class="texto">Total de tareas: <span id="numero"></span></p>
+				</div>
 			<div class="pendientes">
 				<ul>
 					<?php if ($tareas !== false):?>
@@ -74,6 +71,9 @@ if (!empty($id_proyecto)) {
 				</div>
 			</div>
 		</main>
+		<?php else: ?>
+			<p>Selecciona un proyecto de tu menú</p>
+		<?php endif;?>
 	</div>
 <!-- 	<div class="barra">
 		<p class="footer">&copy; Administrador de Proyectos UpTask</p>
